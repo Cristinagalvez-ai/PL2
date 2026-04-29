@@ -1,0 +1,30 @@
+    ¿Cuál es el camino mínimo entre dos entidades A y B del grafo?
+Para encontrar el camino mínimo entre dos entidades en un grafo sin pesos (donde cada salto tiene el mismo coste),
+el algoritmo más eficiente ¿¿es la Búsqueda en Anchura (BFS - Breadth-First Search).??
+Se utiliza una cola para explorar los nodos capa por capa. Comenzando por el nodo A, visitamos todos sus vecinos,
+luego los vecinos de los vecinos, y así sucesivamente hasta encontrar el nodo B. Al ser una búsqueda por niveles,
+el primer camino que encuentra el nodo objetivo es el camino más corto.
+
+    ¿Qué caminos necesita recorrer para que su respuesta fuese correcta?
+Para que la respuesta sea válida y excluya a personas como Antonio, se debe vaidar la existencia de dos caminos distintos
+que partan del mismo nodo sujeto:
+    -Camino de identificación, que confirma que la entidad es un premio Nobel (premio).
+    -Camino de información, que recupera el dato solicitado (nace en).
+Antonio no es devuelto porque aunque tiene el segundo camino, le falta el primero, que es la relación con un premio Nobel.
+Por tanto, Albert Einstein es la única respuesta correcta.
+
+    ¿Qué tipos de nodos tiene el grafo?
+Los tipos de nodos se categorizan mediante el prefijo de su identificador:
+    -persona: entidades humanas.
+    -lugar: ubicaciones geográficas.
+    -premio: entidades abstractas o eventos.
+    -tipo: metadatos que definen la estructura del grafo.
+
+    ¿Qué es una ontología? ¿Qué relación tiene con los grafos? ¿Podríamos crear una ontología para nuestro problema? ¿Qué haríamos con ella?
+Una ontología es una especificación formal y explícita de un dominio de conocimiento. Define qué "clases" existen y qué
+"relaciones" son permitidas entre ellas.
+El grafo es el conjunto de datos (instancias), mientras que la ontología es el esquema o las "reglas del juego" que el grafo debe seguir.
+
+Para aplicarlo a nuestro problema, podríamos crear una ontología para restringir el grafo. Por ejemplo, definir una regla
+que impida que un nodo de tipo lugar sea el sujeto de una relación premio:Nobel. Esto serviría para validar la calidad de los datos
+y detectar errores de carga automáticamente.

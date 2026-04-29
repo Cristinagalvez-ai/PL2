@@ -1,0 +1,4 @@
+[
+  {"sujeto": "persona:Albert_Einstein", "predicado": "nacido_en", "objeto": "lugar:Ulm"},
+  {"sujeto": "persona:Albert_Einstein", "predicado": "premio", "objeto": "Nobel_Fisica"}
+]
