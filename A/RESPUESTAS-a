@@ -1,0 +1,20 @@
+    Verifica que la suma es la misma cuando se suman los elementos de los subárboles izquierdo y derecho. ¿Por qué?
+En ambos casos, La suma coincide porque un Árbol Binario de Búsqueda es una estructura recursiva.
+El valor total de la suma es simplemente la suma de todos los nodos que existen en el sistema.
+No importa si los agrupas como "Raíz + Subárbol Izquierdo + Subárbol Derecho", al final estás procesando exactamente
+el mismo conjunto de 129 números (del 0 al 128).
+
+    Explique las diferencias (si las ha habido) de los resultados obtenidos entre los dos programas de prueba.
+- Prueba 1 (Inserción en orden): al insertar los números del 0 al 128 de forma secuencial, el árbol se convierte
+  en una línea recta.Por eso la altura es 128 y el camino al 110 es de 110 saltos. Es una lista vinculada.
+
+- Prueba 2 (Inserción aleatoria): al insertar datos desordenados, el árbol se ramifica hacia ambos lados. Esto reduce la
+  altura drásticamente y el camino al 110 también. El árbol es mucho más eficiente para buscar.
+
+    ¿Qué sucede con los resultados si ejecuta los programas de prueba varias veces?
+- En la prueba 1: los resultados serán siempre idénticos. Como el orden de 0 a 128 nunca cambia, la estructura 
+  del árbol será siempre la misma línea recta.
+
+- En la prueba 2: la suma total seguirá siendo 8256 y el contenido será el mismo, pero la altura y la longitud 
+  del camino variarán. Esto ocurre porque cada vez que se genera un orden aleatorio distinto, la estructura 
+  jerárquica del árbol cambia, aunque contenga los mismos números.
